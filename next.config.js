@@ -18,7 +18,7 @@ const rewrites = async () => [
 
 
 module.exports = withBundleAnalyzer({
-  // pageExtensions: ["tsx"],
+  pageExtensions: ["js"],
   trailingSlash: true,
   // env,
   // distDir: "build",
@@ -27,13 +27,13 @@ module.exports = withBundleAnalyzer({
   async redirects() {
     return [
       {
-        source: '/company/:slug',
-        destination: '/about/:slug',
+        source: '/company/io-hub/:slug',
+        destination: '/blog/:slug',
         permanent: true,
       },
       {
-        source: '/company/io-hub/:slug',
-        destination: '/blog/:slug',
+        source: '/company/:slug',
+        destination: '/about/:slug',
         permanent: true,
       },
     ]
